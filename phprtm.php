@@ -167,9 +167,10 @@ class RTM extends RTM_Base {
     var $secret = '';
     var $token = '';
 
-    function __construct($apikey, $secret) {
+    function __construct($apikey, $secret, $token = '') {
         $this->apikey = $apikey;
         $this->secret = $secret;
+        $this->token = $token;
     }
 
     /**
