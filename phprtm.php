@@ -7,50 +7,13 @@
  * 
  * NOTE: In order to use this API you need an API key and shared secret. To get these go to: http://www.rememberthemilk.com/services/api/keys.rtm
  *
- * Usage Examples (View http://www.rememberthemilk.com/services/api/ for more details):
- * 1) Initialize the class:
- * 		$rtm = new RTM([API_KEY],[SHARED_SECRET]);
- * 2) Get a link so the user can authorize your program:
- *  	$url = $rtm->genAuthURL([ACCESS_TYPE_REQUIRED]);
- *  		Allowed access types are: read, write, and delete
- * 3) At this point the browser will send back a frob via GET:
- * 		$token = $rtm->getToken()
- *
- * 		OR
- * 		
- * 		$token = $rtm->getToken($frob);
- * 		
- * 		The class will automatically replace the $frob option with $_GET['frob'] if it is left blank.
- * 4) Call any other method:
- *  	echo $rtm->doMethod('auth','checkToken',$args); // Now stores token automatically so you don't have to add it as a arg.
+ * PHPRTM is a forked copy of an API by Tyler Johnson. Per his original code, this code can be modified, copied, and redistrbuted, but not sold. Donations accepted.
  * 
- * Make sure to store $rtm->token into a session to get between pages. To set it on a new page just run the $rtm->setToken($token) function.
- * 		
- * The doMethod() method is very versatile. First parameter is the method type (ex. auth, tasks, contacts), second parameter is the method (ex. checkToken, getList), and third parameter is an optional array for arguments.
- * To use the thrid parameter, simply setup an array with all arguments you want OTHER THEN token, api_key, api_sig, and method:
- * 		Two styles:
- * 			$args = array(
- * 				'auth_token'	=> $token,
- * 				'timeline'		=> $timeline,
- * 				'list_id'		=> $list_id
- * 			);
- * 			echo $rtm->doMethod('lists','archive',$args);
- * 			
- * 			OR
- * 			
- * 			$args['auth_token'] = $token;
- * 			$args['timeline'] = $timeline;
- * 			$args['list_id'] = $list_id;
- * 			echo $rtm->doMethod('lists','archive',$args);
- * 			
- * This API Kit is under open development. This means it is still being improved and if there are any outside additions/improvements, please send me an email so I can include them.
- * 	
- * (c)Tyler Johnson. This code can be modified, copied, and redistrbuted, but not sold. Donations accepted.
- * 			
- * @author		Tyler Johnson, Anti-Radiant Creative
- * @email		tylerj@arcreate.net
- * @link		http://arcreate.net/stuff/random/RTM/rtm_php_v0.1b.zip
- * @version		0.2.1b
+ *
+ * @author              Richard Lynskey <richard@mozor.net>
+ * @author		Tyler Johnson <tylerj@arcreate.net>
+ * @link		https://github.com/richard4339/PHPRTM
+ * @version		0.3
  */
 // ------------------------------------------------------------------------
 
@@ -60,9 +23,17 @@
  * The main two functions used by the developer.
  * 
  * @access public
+ * @param	string		api_key
+ * @param	string		shared secret
+ * @param       string          token (optional)
  * @return mixed
  */
 abstract class RTM_Base {
+
+    var $apikey = '';
+    var $secret = '';
+    var $token = '';
+    var $dates;
 
     /**
      * Generate Authorization URL
@@ -150,29 +121,6 @@ abstract class RTM_Base {
         return $ret;
     }
 
-}
-
-/**
- * Main RTM API Class
- *
- * Connections.
- * @access	public
- * @param	string		api_key
- * @param	string		shared secret
- * @return	string
- */
-class RTM extends RTM_Base {
-
-    var $apikey = '';
-    var $secret = '';
-    var $token = '';
-
-    function __construct($apikey, $secret, $token = '') {
-        $this->apikey = $apikey;
-        $this->secret = $secret;
-        $this->token = $token;
-    }
-
     /**
      * Generate API URL
      *
@@ -250,6 +198,67 @@ class RTM extends RTM_Base {
         $this->last_api_call = $api_url;
         curl_close($curl_handle);
         return $rtm_data;
+    }
+
+    /**
+     * Returns a DateTime object for use in defining the APIs predefined date objects
+     * 
+     * @param string $n String representation of date
+     * @return datetime
+     */
+    private function buildDate($n = '') {
+        if ($n == '') {
+            $now = new DateTime();
+        } else {
+            $now = $n;
+        }
+
+        return $now;
+    }
+
+    /**
+     * Returns the previous date for the date in argument $n
+     * @param string $n String representation of date
+     * @return datetime
+     */
+    protected function defineYesterday($n = '') {
+
+        $now = $this->buildDate($n);
+
+        $minus1 = new DateInterval('P1D');
+        return $now->sub($minus1)->format('n/j/Y');
+    }
+    
+    /**
+     * Returns today's date for the date in argument $n
+     * @param string $n String representation of date
+     * @return datetime
+     */
+    protected function defineToday($n = '') {
+
+        $now = $this->buildDate($n);
+        return $now->format('n/j/Y');
+    }
+
+}
+
+/**
+ * Main RTM API Class
+ *
+ * Connections.
+ * @access	public
+ * @return	string
+ */
+class RTM extends RTM_Base {
+
+    function __construct($apikey, $secret, $token = '') {
+        $this->apikey = $apikey;
+        $this->secret = $secret;
+        $this->token = $token;
+
+        //$this->dates = (object) array('yesterday' => '', 'today' => '');
+        $this->dates->yesterday = $this->defineYesterday();
+        $this->dates->today = $this->defineToday();
     }
 
 }
