@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project version="2.0.0a2" title="">
-  <file path="phprtm.php" hash="9362058adbba63194f37561d8b4ca09a" package="Default">
+  <file path="phprtm.php" hash="144f235f18572a4306987fc8237794cd" package="PHPRTM">
     <docblock line="3">
       <description><![CDATA[Remember the Milk API Class for the Remember the Milk API]]></description>
       <long-description><![CDATA[<p>Provides an easy way for PHP users to implement the RTM API.</p>
@@ -12,369 +12,370 @@
       <tag line="3" name="author" description="Tyler Johnson &lt;tylerj@arcreate.net&gt;"/>
       <tag line="3" name="link" description="https://github.com/richard4339/PHPRTM" link="https://github.com/richard4339/PHPRTM"/>
       <tag line="3" name="version" description="0.3"/>
+      <tag line="3" name="package" description="PHPRTM"/>
     </docblock>
-    <class final="false" abstract="true" namespace="default" line="31" package="Default">
+    <class final="false" abstract="true" namespace="default" line="32" package="Default">
       <name>RTM_Base</name>
       <full_name>\RTM_Base</full_name>
       <extends/>
-      <docblock line="20">
+      <docblock line="21">
         <description><![CDATA[RTM API Class Base]]></description>
         <long-description><![CDATA[<p>The main two functions used by the developer.</p>]]></long-description>
-        <tag line="20" name="access" description="public"/>
-        <tag line="20" name="param" description="api_key" type="string" variable="">
+        <tag line="21" name="access" description="public"/>
+        <tag line="21" name="param" description="api_key" type="string" variable="">
           <type by_reference="false">string</type>
         </tag>
-        <tag line="20" name="param" description="shared secret" type="string" variable="">
+        <tag line="21" name="param" description="shared secret" type="string" variable="">
           <type by_reference="false">string</type>
         </tag>
-        <tag line="20" name="param" description="token (optional)" type="string" variable="">
+        <tag line="21" name="param" description="token (optional)" type="string" variable="">
           <type by_reference="false">string</type>
         </tag>
-        <tag line="20" name="return" description="" type="mixed">
+        <tag line="21" name="return" description="" type="mixed">
           <type by_reference="false">mixed</type>
         </tag>
       </docblock>
-      <property final="false" static="false" visibility="public" line="38" package="Default">
+      <property final="false" static="false" visibility="public" line="39" package="Default">
         <name>$apikey</name>
         <default><![CDATA['']]></default>
-        <docblock line="33">
+        <docblock line="34">
           <description><![CDATA[RTM provided API Key]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="33" name="var" description="" type="string">
+          <tag line="34" name="var" description="" type="string">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
       </property>
-      <property final="false" static="false" visibility="public" line="45" package="Default">
+      <property final="false" static="false" visibility="public" line="46" package="Default">
         <name>$secret</name>
         <default><![CDATA['']]></default>
-        <docblock line="40">
+        <docblock line="41">
           <description><![CDATA[RTM provided secret]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="40" name="var" description="" type="string">
+          <tag line="41" name="var" description="" type="string">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
       </property>
-      <property final="false" static="false" visibility="public" line="52" package="Default">
+      <property final="false" static="false" visibility="public" line="53" package="Default">
         <name>$token</name>
         <default><![CDATA['']]></default>
-        <docblock line="47">
+        <docblock line="48">
           <description><![CDATA[Token if using with only one client]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="47" name="var" description="" type="string">
+          <tag line="48" name="var" description="" type="string">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
       </property>
-      <property final="false" static="false" visibility="public" line="59" package="Default">
+      <property final="false" static="false" visibility="public" line="60" package="Default">
         <name>$dates</name>
         <default><![CDATA[]]></default>
-        <docblock line="54">
+        <docblock line="55">
           <description><![CDATA[dates->yesterday and dates->today]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="54" name="var" description="" type="object">
+          <tag line="55" name="var" description="" type="object">
             <type by_reference="false">object</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="70" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="71" package="">
         <name>genAuthURL</name>
         <type>function</type>
-        <docblock line="61">
+        <docblock line="62">
           <description><![CDATA[Generate Authorization URL]]></description>
           <long-description><![CDATA[<p>Generates the URL needed for the application to be authorized to access someones account.</p>]]></long-description>
-          <tag line="61" name="access" description="public"/>
-          <tag line="61" name="param" description="read, write, or delete" type="string" variable="$perms">
+          <tag line="62" name="access" description="public"/>
+          <tag line="62" name="param" description="read, write, or delete" type="string" variable="$perms">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="61" name="return" description="" type="string">
+          <tag line="62" name="return" description="" type="string">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="70">
+        <argument line="71">
           <name>$perms</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="85" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="86" package="">
         <name>getToken</name>
         <type>function</type>
-        <docblock line="76">
+        <docblock line="77">
           <description><![CDATA[Generate Token and Check]]></description>
           <long-description><![CDATA[<p>Generates a Token based on a Frob and checks for accuracy.</p>]]></long-description>
-          <tag line="76" name="access" description="public"/>
-          <tag line="76" name="param" description="string" type="" variable="$frob"/>
-          <tag line="76" name="return" description="or bool (if it is accurate it passes the token and false for failure)" type="string">
+          <tag line="77" name="access" description="public"/>
+          <tag line="77" name="param" description="string" type="" variable="$frob"/>
+          <tag line="77" name="return" description="or bool (if it is accurate it passes the token and false for failure)" type="string">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="85">
+        <argument line="86">
           <name>$frob</name>
           <default><![CDATA['']]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="119" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="120" package="">
         <name>setToken</name>
         <type>function</type>
-        <docblock line="112">
+        <docblock line="113">
           <description><![CDATA[Set Global Token Variable]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="112" name="access" description="public"/>
-          <tag line="112" name="param" description="string" type="" variable="$token"/>
-          <tag line="112" name="return" description="" type="void">
+          <tag line="113" name="access" description="public"/>
+          <tag line="113" name="param" description="string" type="" variable="$token"/>
+          <tag line="113" name="return" description="" type="void">
             <type by_reference="false">void</type>
           </tag>
         </docblock>
-        <argument line="119">
+        <argument line="120">
           <name>$token</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="134" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="135" package="">
         <name>doMethod</name>
         <type>function</type>
-        <docblock line="123">
+        <docblock line="124">
           <description><![CDATA[Do API Method]]></description>
           <long-description><![CDATA[<p>Sends a get request to RTM and returns the xml. Use SimplXMLElement to read.</p>]]></long-description>
-          <tag line="123" name="access" description="public"/>
-          <tag line="123" name="param" description="method type" type="string" variable="$type">
+          <tag line="124" name="access" description="public"/>
+          <tag line="124" name="param" description="method type" type="string" variable="$type">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="123" name="param" description="method" type="string" variable="$method">
+          <tag line="124" name="param" description="method" type="string" variable="$method">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="123" name="param" description="arguments" type="array" variable="$args">
+          <tag line="124" name="param" description="arguments" type="array" variable="$args">
             <type by_reference="false">array</type>
           </tag>
-          <tag line="123" name="return" description="format: xml" type="string">
+          <tag line="124" name="return" description="format: xml" type="string">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="134">
+        <argument line="135">
           <name>$type</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="134">
+        <argument line="135">
           <name>$method</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="134">
+        <argument line="135">
           <name>$args</name>
           <default><![CDATA[array()]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="158" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="159" package="">
         <name>apiURL</name>
         <type>function</type>
-        <docblock line="147">
+        <docblock line="148">
           <description><![CDATA[Generate API URL]]></description>
           <long-description><![CDATA[<p>Generates the URL to make a get a request.</p>]]></long-description>
-          <tag line="147" name="access" description="public"/>
-          <tag line="147" name="param" description="method" type="string" variable="$rtm_method">
+          <tag line="148" name="access" description="public"/>
+          <tag line="148" name="param" description="method" type="string" variable="$rtm_method">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="147" name="param" description="arguments" type="array" variable="$args">
+          <tag line="148" name="param" description="arguments" type="array" variable="$args">
             <type by_reference="false">array</type>
           </tag>
-          <tag line="147" name="param" description="require signature" type="bool" variable="$require_sig">
+          <tag line="148" name="param" description="require signature" type="bool" variable="$require_sig">
             <type by_reference="false">bool</type>
           </tag>
-          <tag line="147" name="return" description="" type="string">
+          <tag line="148" name="return" description="" type="string">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="158">
+        <argument line="159">
           <name>$rtm_method</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="158">
+        <argument line="159">
           <name>$args</name>
           <default><![CDATA[array()]]></default>
           <type/>
         </argument>
-        <argument line="158">
+        <argument line="159">
           <name>$require_sig</name>
           <default><![CDATA[true]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="182" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="183" package="">
         <name>api_sig</name>
         <type>function</type>
-        <docblock line="172">
+        <docblock line="173">
           <description><![CDATA[Generate API Signature]]></description>
           <long-description><![CDATA[<p>Generates the signature needed to make certain requests.</p>]]></long-description>
-          <tag line="172" name="access" description="public"/>
-          <tag line="172" name="param" description="method" type="string" variable="$rtm_method">
+          <tag line="173" name="access" description="public"/>
+          <tag line="173" name="param" description="method" type="string" variable="$rtm_method">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="172" name="param" description="arguments" type="array" variable="$args">
+          <tag line="173" name="param" description="arguments" type="array" variable="$args">
             <type by_reference="false">array</type>
           </tag>
-          <tag line="172" name="return" description="" type="string">
+          <tag line="173" name="return" description="" type="string">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="182">
+        <argument line="183">
           <name>$rtm_method</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="182">
+        <argument line="183">
           <name>$args</name>
           <default><![CDATA[array()]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="208" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="209" package="">
         <name>apiCall</name>
         <type>function</type>
-        <docblock line="196">
+        <docblock line="197">
           <description><![CDATA[Make the Get Request]]></description>
           <long-description><![CDATA[<p>Makes the get request and returns the xml</p>]]></long-description>
-          <tag line="196" name="access" description="public"/>
-          <tag line="196" name="param" description="method" type="string" variable="$rtm_method">
+          <tag line="197" name="access" description="public"/>
+          <tag line="197" name="param" description="method" type="string" variable="$rtm_method">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="196" name="param" description="curl method (always get unless RTM changes to post)" type="string" variable="$http_method">
+          <tag line="197" name="param" description="curl method (always get unless RTM changes to post)" type="string" variable="$http_method">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="196" name="param" description="arguments" type="array" variable="$args">
+          <tag line="197" name="param" description="arguments" type="array" variable="$args">
             <type by_reference="false">array</type>
           </tag>
-          <tag line="196" name="param" description="require signature" type="bool" variable="$require_sig">
+          <tag line="197" name="param" description="require signature" type="bool" variable="$require_sig">
             <type by_reference="false">bool</type>
           </tag>
-          <tag line="196" name="return" description="" type="string">
+          <tag line="197" name="return" description="" type="string">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="208">
+        <argument line="209">
           <name>$rtm_method</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="208">
+        <argument line="209">
           <name>$http_method</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="208">
+        <argument line="209">
           <name>$args</name>
           <default><![CDATA[array()]]></default>
           <type/>
         </argument>
-        <argument line="208">
+        <argument line="209">
           <name>$require_sig</name>
           <default><![CDATA[true]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="default" line="232" package="">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="default" line="233" package="">
         <name>buildDate</name>
         <type>function</type>
-        <docblock line="226">
+        <docblock line="227">
           <description><![CDATA[Returns a DateTime object for use in defining the APIs predefined date objects]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="226" name="param" description="String representation of date" type="string" variable="$n">
+          <tag line="227" name="param" description="String representation of date" type="string" variable="$n">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="226" name="return" description="" type="\datetime">
+          <tag line="227" name="return" description="" type="\datetime">
             <type by_reference="false">\datetime</type>
           </tag>
         </docblock>
-        <argument line="232">
+        <argument line="233">
           <name>$n</name>
           <default><![CDATA['']]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="default" line="247" package="">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="default" line="248" package="">
         <name>defineYesterday</name>
         <type>function</type>
-        <docblock line="242">
+        <docblock line="243">
           <description><![CDATA[Returns the previous date for the date in argument $n]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="242" name="param" description="String representation of date" type="string" variable="$n">
+          <tag line="243" name="param" description="String representation of date" type="string" variable="$n">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="242" name="return" description="" type="\datetime">
+          <tag line="243" name="return" description="" type="\datetime">
             <type by_reference="false">\datetime</type>
           </tag>
         </docblock>
-        <argument line="247">
+        <argument line="248">
           <name>$n</name>
           <default><![CDATA['']]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="default" line="260" package="">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="default" line="261" package="">
         <name>defineToday</name>
         <type>function</type>
-        <docblock line="255">
+        <docblock line="256">
           <description><![CDATA[Returns today's date for the date in argument $n]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="255" name="param" description="String representation of date" type="string" variable="$n">
+          <tag line="256" name="param" description="String representation of date" type="string" variable="$n">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="255" name="return" description="" type="\datetime">
+          <tag line="256" name="return" description="" type="\datetime">
             <type by_reference="false">\datetime</type>
           </tag>
         </docblock>
-        <argument line="260">
+        <argument line="261">
           <name>$n</name>
           <default><![CDATA['']]></default>
           <type/>
         </argument>
       </method>
     </class>
-    <class final="false" abstract="false" namespace="default" line="275" package="Default">
+    <class final="false" abstract="false" namespace="default" line="276" package="Default">
       <name>RTM</name>
       <full_name>\RTM</full_name>
       <extends>\RTM_Base</extends>
-      <docblock line="268">
+      <docblock line="269">
         <description><![CDATA[Main RTM API Class]]></description>
         <long-description><![CDATA[<p>Connections.</p>]]></long-description>
-        <tag line="268" name="access" description="public"/>
-        <tag line="268" name="return" description="" type="string">
+        <tag line="269" name="access" description="public"/>
+        <tag line="269" name="return" description="" type="string">
           <type by_reference="false">string</type>
         </tag>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="284" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="285" package="">
         <name>__construct</name>
         <type>function</type>
-        <docblock line="277">
+        <docblock line="278">
           <description><![CDATA[Constructor function]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="277" name="param" description="" type="string" variable="$apikey">
+          <tag line="278" name="param" description="" type="string" variable="$apikey">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="277" name="param" description="" type="string" variable="$secret">
+          <tag line="278" name="param" description="" type="string" variable="$secret">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="277" name="param" description="" type="string" variable="$token">
+          <tag line="278" name="param" description="" type="string" variable="$token">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="284">
+        <argument line="285">
           <name>$apikey</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="284">
+        <argument line="285">
           <name>$secret</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="284">
+        <argument line="285">
           <name>$token</name>
           <default><![CDATA['']]></default>
           <type/>
@@ -384,6 +385,7 @@
   </file>
   <package name="" full_name=""/>
   <package name="Default" full_name="Default"/>
+  <package name="PHPRTM" full_name="PHPRTM"/>
   <namespace name="default" full_name="default"/>
   <marker count="0">todo</marker>
   <marker count="0">fixme</marker>
