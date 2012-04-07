@@ -31,21 +31,29 @@
 abstract class RTM_Base {
 
     /**
+     * RTM provided API Key
+     * 
      * @var string
      */
     var $apikey = '';
 
     /**
+     * RTM provided secret
+     * 
      * @var string
      */
     var $secret = '';
 
     /**
+     * Token if using with only one client
+     * 
      * @var string
      */
     var $token = '';
 
     /**
+     * dates->yesterday and dates->today
+     * 
      * @var object
      */
     var $dates;
