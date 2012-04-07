@@ -14,6 +14,7 @@
  * @author		Tyler Johnson <tylerj@arcreate.net>
  * @link		https://github.com/richard4339/PHPRTM
  * @version		0.3
+ * @package             PHPRTM
  */
 // ------------------------------------------------------------------------
 
