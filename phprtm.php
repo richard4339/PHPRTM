@@ -30,9 +30,24 @@
  */
 abstract class RTM_Base {
 
+    /**
+     * @var string
+     */
     var $apikey = '';
+
+    /**
+     * @var string
+     */
     var $secret = '';
+
+    /**
+     * @var string
+     */
     var $token = '';
+
+    /**
+     * @var object
+     */
     var $dates;
 
     /**
@@ -228,7 +243,7 @@ abstract class RTM_Base {
         $minus1 = new DateInterval('P1D');
         return $now->sub($minus1)->format('n/j/Y');
     }
-    
+
     /**
      * Returns today's date for the date in argument $n
      * @param string $n String representation of date
