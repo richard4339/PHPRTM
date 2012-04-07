@@ -1,0 +1,423 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \RTM</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu"></ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">5</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#__construct" title="__construct :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public inherited"><a href="#apiCall" title="apiCall :: Make the Get Request"><span class="description">Make the Get Request</span><pre>apiCall()</pre></a></li>
+<li class="method public inherited"><a href="#apiURL" title="apiURL :: Generate API URL"><span class="description">Generate API URL</span><pre>apiURL()</pre></a></li>
+<li class="method public inherited"><a href="#api_sig" title="api_sig :: Generate API Signature"><span class="description">Generate API Signature</span><pre>api_sig()</pre></a></li>
+<li class="method public inherited"><a href="#doMethod" title="doMethod :: Do API Method"><span class="description">Do API Method</span><pre>doMethod()</pre></a></li>
+<li class="method public inherited"><a href="#genAuthURL" title="genAuthURL :: Generate Authorization URL"><span class="description">Generate Authorization URL</span><pre>genAuthURL()</pre></a></li>
+<li class="method public inherited"><a href="#getToken" title="getToken :: Generate Token and Check"><span class="description">Generate Token and Check</span><pre>getToken()</pre></a></li>
+<li class="method public inherited"><a href="#setToken" title="setToken :: Set Global Token Variable"><span class="description">Set Global Token Variable</span><pre>setToken()</pre></a></li>
+<li class="nav-header protected">» Protected</li>
+<li class="method protected inherited"><a href="#defineToday" title="defineToday :: Returns today's date for the date in argument $n"><span class="description">Returns today's date for the date in argument $n</span><pre>defineToday()</pre></a></li>
+<li class="method protected inherited"><a href="#defineYesterday" title="defineYesterday :: Returns the previous date for the date in argument $n"><span class="description">Returns the previous date for the date in argument $n</span><pre>defineYesterday()</pre></a></li>
+<li class="nav-header private">» Private</li>
+<li class="method private inherited"><a href="#buildDate" title="buildDate :: Returns a DateTime object for use in defining the APIs predefined date objects"><span class="description">Returns a DateTime object for use in defining the APIs predefined date objects</span><pre>buildDate()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="property public inherited"><a href="#%24apikey" title="$apikey :: "><span class="description">$apikey</span><pre>$apikey</pre></a></li>
+<li class="property public inherited"><a href="#%24dates" title="$dates :: "><span class="description">$dates</span><pre>$dates</pre></a></li>
+<li class="property public inherited"><a href="#%24secret" title="$secret :: "><span class="description">$secret</span><pre>$secret</pre></a></li>
+<li class="property public inherited"><a href="#%24token" title="$token :: "><span class="description">$token</span><pre>$token</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CRTM" id="\RTM"></a><div href="../classes/RTM.html" class="element class">
+<p class="short_description">Main RTM API Class</p>
+<div class="details">
+<p class="long_description"><p>Connections.</p></p>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>return</th>
+<td></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>__construct()
+        </h2>
+<pre>__construct($apikey, $secret, $token) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$apikey</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$secret</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$token</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="apiCall" id="apiCall"></a><div class="element clickable method public apiCall" data-toggle="collapse" data-target=".apiCall .collapse">
+<h2>Make the Get Request</h2>
+<pre>apiCall(string $rtm_method, string $http_method, array $args, bool $require_sig) : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"><p>Makes the get request and returns the xml</p></p>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\RTM_Base::apiCall()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$rtm_method</h4>
+<code>string</code><p>method</p></div>
+<div class="subelement argument">
+<h4>$http_method</h4>
+<code>string</code><p>curl method (always get unless RTM changes to post)</p>
+</div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>arguments</p></div>
+<div class="subelement argument">
+<h4>$require_sig</h4>
+<code>bool</code><p>require signature</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="apiURL" id="apiURL"></a><div class="element clickable method public apiURL" data-toggle="collapse" data-target=".apiURL .collapse">
+<h2>Generate API URL</h2>
+<pre>apiURL(string $rtm_method, array $args, bool $require_sig) : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"><p>Generates the URL to make a get a request.</p></p>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\RTM_Base::apiURL()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$rtm_method</h4>
+<code>string</code><p>method</p></div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>arguments</p></div>
+<div class="subelement argument">
+<h4>$require_sig</h4>
+<code>bool</code><p>require signature</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="api_sig" id="api_sig"></a><div class="element clickable method public api_sig" data-toggle="collapse" data-target=".api_sig .collapse">
+<h2>Generate API Signature</h2>
+<pre>api_sig(string $rtm_method, array $args) : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"><p>Generates the signature needed to make certain requests.</p></p>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\RTM_Base::api_sig()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$rtm_method</h4>
+<code>string</code><p>method</p></div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>arguments</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="doMethod" id="doMethod"></a><div class="element clickable method public doMethod" data-toggle="collapse" data-target=".doMethod .collapse">
+<h2>Do API Method</h2>
+<pre>doMethod(string $type, string $method, array $args) : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"><p>Sends a get request to RTM and returns the xml. Use SimplXMLElement to read.</p></p>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\RTM_Base::doMethod()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$type</h4>
+<code>string</code><p>method type</p></div>
+<div class="subelement argument">
+<h4>$method</h4>
+<code>string</code><p>method</p></div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>arguments</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>format: xml</div>
+</div></div>
+</div>
+<a name="genAuthURL" id="genAuthURL"></a><div class="element clickable method public genAuthURL" data-toggle="collapse" data-target=".genAuthURL .collapse">
+<h2>Generate Authorization URL</h2>
+<pre>genAuthURL(string $perms) : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"><p>Generates the URL needed for the application to be authorized to access someones account.</p></p>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\RTM_Base::genAuthURL()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$perms</h4>
+<code>string</code><p>read, write, or delete</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="getToken" id="getToken"></a><div class="element clickable method public getToken" data-toggle="collapse" data-target=".getToken .collapse">
+<h2>Generate Token and Check</h2>
+<pre>getToken($frob) : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"><p>Generates a Token based on a Frob and checks for accuracy.</p></p>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\RTM_Base::getToken()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$frob</h4>
+<code></code><p>string</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>or bool (if it is accurate it passes the token and false for failure)</div>
+</div></div>
+</div>
+<a name="setToken" id="setToken"></a><div class="element clickable method public setToken" data-toggle="collapse" data-target=".setToken .collapse">
+<h2>Set Global Token Variable</h2>
+<pre>setToken($token) : void</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\RTM_Base::setToken()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$token</h4>
+<code></code><p>string</p></div>
+</div></div>
+</div>
+<a name="defineToday" id="defineToday"></a><div class="element clickable method protected defineToday" data-toggle="collapse" data-target=".defineToday .collapse">
+<h2>Returns today's date for the date in argument $n</h2>
+<pre>defineToday(string $n) : \datetime</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\RTM_Base::defineToday()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$n</h4>
+<code>string</code><p>String representation of date</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\datetime</code></div>
+</div></div>
+</div>
+<a name="defineYesterday" id="defineYesterday"></a><div class="element clickable method protected defineYesterday" data-toggle="collapse" data-target=".defineYesterday .collapse">
+<h2>Returns the previous date for the date in argument $n</h2>
+<pre>defineYesterday(string $n) : \datetime</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\RTM_Base::defineYesterday()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$n</h4>
+<code>string</code><p>String representation of date</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\datetime</code></div>
+</div></div>
+</div>
+<a name="buildDate" id="buildDate"></a><div class="element clickable method private buildDate" data-toggle="collapse" data-target=".buildDate .collapse">
+<h2>Returns a DateTime object for use in defining the APIs predefined date objects</h2>
+<pre>buildDate(string $n) : \datetime</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\RTM_Base::buildDate()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$n</h4>
+<code>string</code><p>String representation of date</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\datetime</code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24apikey" id="$apikey"> </a><div class="element clickable property public $apikey" data-toggle="collapse" data-target=".$apikey .collapse">
+<h2>$apikey</h2>
+<pre>$apikey </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\RTM_Base::$$apikey</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24dates" id="$dates"> </a><div class="element clickable property public $dates" data-toggle="collapse" data-target=".$dates .collapse">
+<h2>$dates</h2>
+<pre>$dates </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\RTM_Base::$$dates</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24secret" id="$secret"> </a><div class="element clickable property public $secret" data-toggle="collapse" data-target=".$secret .collapse">
+<h2>$secret</h2>
+<pre>$secret </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\RTM_Base::$$secret</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24token" id="$token"> </a><div class="element clickable property public $token" data-toggle="collapse" data-target=".$token .collapse">
+<h2>$token</h2>
+<pre>$token </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\RTM_Base::$$token</td>
+</tr></table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a2</a> and<br>
+            generated on 2012-04-07T14:12:47-05:00.<br></footer></div>
+</div>
+</body>
+</html>
