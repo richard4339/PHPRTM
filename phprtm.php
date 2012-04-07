@@ -277,9 +277,9 @@ class RTM extends RTM_Base {
     /**
      * Constructor function
      * 
-     * @param type $apikey
-     * @param type $secret
-     * @param type $token 
+     * @param string $apikey
+     * @param string $secret
+     * @param string $token
      */
     function __construct($apikey, $secret, $token = '') {
         $this->apikey = $apikey;

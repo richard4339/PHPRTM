@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project version="2.0.0a2" title="">
-  <file path="phprtm.php" hash="f6bc3a761532c200b914dad9952b1069" package="Default">
+  <file path="phprtm.php" hash="9362058adbba63194f37561d8b4ca09a" package="Default">
     <docblock line="3">
       <description><![CDATA[Remember the Milk API Class for the Remember the Milk API]]></description>
       <long-description><![CDATA[<p>Provides an easy way for PHP users to implement the RTM API.</p>
@@ -13,9 +13,6 @@
       <tag line="3" name="link" description="https://github.com/richard4339/PHPRTM" link="https://github.com/richard4339/PHPRTM"/>
       <tag line="3" name="version" description="0.3"/>
     </docblock>
-    <parse_markers>
-      <error line="277" code="50010">No DocBlock was found for method __construct()</error>
-    </parse_markers>
     <class final="false" abstract="true" namespace="default" line="31" package="Default">
       <name>RTM_Base</name>
       <full_name>\RTM_Base</full_name>
@@ -351,20 +348,33 @@
           <type by_reference="false">string</type>
         </tag>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="277" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="284" package="">
         <name>__construct</name>
         <type>function</type>
-        <argument line="277">
+        <docblock line="277">
+          <description><![CDATA[Constructor function]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="277" name="param" description="" type="string" variable="$apikey">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="277" name="param" description="" type="string" variable="$secret">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="277" name="param" description="" type="string" variable="$token">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="284">
           <name>$apikey</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="277">
+        <argument line="284">
           <name>$secret</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="277">
+        <argument line="284">
           <name>$token</name>
           <default><![CDATA['']]></default>
           <type/>
