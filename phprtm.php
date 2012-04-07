@@ -274,6 +274,13 @@ abstract class RTM_Base {
  */
 class RTM extends RTM_Base {
 
+    /**
+     * Constructor function
+     * 
+     * @param type $apikey
+     * @param type $secret
+     * @param type $token 
+     */
     function __construct($apikey, $secret, $token = '') {
         $this->apikey = $apikey;
         $this->secret = $secret;
