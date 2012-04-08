@@ -9,12 +9,11 @@
  *
  * PHPRTM is a forked copy of an API by Tyler Johnson. Per his original code, this code can be modified, copied, and redistrbuted, but not sold. Donations accepted.
  * 
- *
- * @author              Richard Lynskey <richard@mozor.net>
+ * @author		Richard Lynskey <richard@mozor.net>
  * @author		Tyler Johnson <tylerj@arcreate.net>
  * @link		https://github.com/richard4339/PHPRTM
  * @version		0.3
- * @package             PHPRTM
+ * @package		PHPRTM
  */
 // ------------------------------------------------------------------------
 
@@ -23,11 +22,12 @@
  *
  * The main two functions used by the developer.
  * 
- * @access public
- * @param	string		api_key
- * @param	string		shared secret
+ * @access		public
+ * @package		PHPRTM
+ * @param		string		api_key
+ * @param		string		shared secret
  * @param       string          token (optional)
- * @return mixed
+ * @return		object
  */
 abstract class RTM_Base {
 
@@ -271,6 +271,7 @@ abstract class RTM_Base {
  *
  * Connections.
  * @access	public
+ * @package             PHPRTM
  * @return	string
  */
 class RTM extends RTM_Base {
@@ -287,7 +288,6 @@ class RTM extends RTM_Base {
         $this->secret = $secret;
         $this->token = $token;
 
-        //$this->dates = (object) array('yesterday' => '', 'today' => '');
         $this->dates->yesterday = $this->defineYesterday();
         $this->dates->today = $this->defineToday();
     }

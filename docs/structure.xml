@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project version="2.0.0a2" title="">
-  <file path="phprtm.php" hash="144f235f18572a4306987fc8237794cd" package="PHPRTM">
+  <file path="phprtm.php" hash="5e64763ef3c41dbdee7d473f020d4433" package="PHPRTM">
     <docblock line="3">
       <description><![CDATA[Remember the Milk API Class for the Remember the Milk API]]></description>
       <long-description><![CDATA[<p>Provides an easy way for PHP users to implement the RTM API.</p>
@@ -14,25 +14,26 @@
       <tag line="3" name="version" description="0.3"/>
       <tag line="3" name="package" description="PHPRTM"/>
     </docblock>
-    <class final="false" abstract="true" namespace="default" line="32" package="Default">
+    <class final="false" abstract="true" namespace="default" line="32" package="PHPRTM">
       <name>RTM_Base</name>
       <full_name>\RTM_Base</full_name>
       <extends/>
-      <docblock line="21">
+      <docblock line="20">
         <description><![CDATA[RTM API Class Base]]></description>
         <long-description><![CDATA[<p>The main two functions used by the developer.</p>]]></long-description>
-        <tag line="21" name="access" description="public"/>
-        <tag line="21" name="param" description="api_key" type="string" variable="">
+        <tag line="20" name="access" description="public"/>
+        <tag line="20" name="package" description="PHPRTM"/>
+        <tag line="20" name="param" description="api_key" type="string" variable="">
           <type by_reference="false">string</type>
         </tag>
-        <tag line="21" name="param" description="shared secret" type="string" variable="">
+        <tag line="20" name="param" description="shared secret" type="string" variable="">
           <type by_reference="false">string</type>
         </tag>
-        <tag line="21" name="param" description="token (optional)" type="string" variable="">
+        <tag line="20" name="param" description="token (optional)" type="string" variable="">
           <type by_reference="false">string</type>
         </tag>
-        <tag line="21" name="return" description="" type="mixed">
-          <type by_reference="false">mixed</type>
+        <tag line="20" name="return" description="" type="object">
+          <type by_reference="false">object</type>
         </tag>
       </docblock>
       <property final="false" static="false" visibility="public" line="39" package="Default">
@@ -337,7 +338,7 @@
         </argument>
       </method>
     </class>
-    <class final="false" abstract="false" namespace="default" line="276" package="Default">
+    <class final="false" abstract="false" namespace="default" line="277" package="PHPRTM">
       <name>RTM</name>
       <full_name>\RTM</full_name>
       <extends>\RTM_Base</extends>
@@ -345,37 +346,38 @@
         <description><![CDATA[Main RTM API Class]]></description>
         <long-description><![CDATA[<p>Connections.</p>]]></long-description>
         <tag line="269" name="access" description="public"/>
+        <tag line="269" name="package" description="PHPRTM"/>
         <tag line="269" name="return" description="" type="string">
           <type by_reference="false">string</type>
         </tag>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="285" package="">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="286" package="">
         <name>__construct</name>
         <type>function</type>
-        <docblock line="278">
+        <docblock line="279">
           <description><![CDATA[Constructor function]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="278" name="param" description="" type="string" variable="$apikey">
+          <tag line="279" name="param" description="" type="string" variable="$apikey">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="278" name="param" description="" type="string" variable="$secret">
+          <tag line="279" name="param" description="" type="string" variable="$secret">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="278" name="param" description="" type="string" variable="$token">
+          <tag line="279" name="param" description="" type="string" variable="$token">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="285">
+        <argument line="286">
           <name>$apikey</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="285">
+        <argument line="286">
           <name>$secret</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="285">
+        <argument line="286">
           <name>$token</name>
           <default><![CDATA['']]></default>
           <type/>
