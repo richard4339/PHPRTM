@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<project version="2.0.0a2" title="">
+<project version="2.0.0a2" title="PHPRTM">
   <file path="phprtm.php" hash="5e64763ef3c41dbdee7d473f020d4433" package="PHPRTM">
     <docblock line="3">
       <description><![CDATA[Remember the Milk API Class for the Remember the Milk API]]></description>
